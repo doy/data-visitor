@@ -1,4 +1,10 @@
 {{$NEXT}}
+    - The class callbacks to be run for an object are now chosen once, at the
+      start of visiting that object. Previously, it always looked through the
+      entire list of callbacks every time, in a loop in which the object in
+      question could be changed by the callback. Since the class callbacks are
+      only partially ordered, this lead to differences in whether a callback
+      would be called or not based on hash order. reported by Robin Smidsrød.
 
 0.28  2012-02-12
     - convert to dzil
