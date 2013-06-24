@@ -1,4 +1,6 @@
 {{$NEXT}}
+    - doy/data-visitor should probably be the canonical repository at this
+      point
 
 0.29  2013-06-24
     - The class callbacks to be run for an object are now chosen once, at the
