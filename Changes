@@ -1,4 +1,6 @@
 {{$NEXT}}
+
+0.30  2013-06-24
     - doy/data-visitor should probably be the canonical repository at this
       point
 
