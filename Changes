@@ -1,4 +1,6 @@
 {{$NEXT}}
+
+0.29  2013-06-24
     - The class callbacks to be run for an object are now chosen once, at the
       start of visiting that object. Previously, it always looked through the
       entire list of callbacks every time, in a loop in which the object in
