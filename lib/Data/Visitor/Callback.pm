@@ -145,9 +145,10 @@ sub visit_object {
 
 	my $class_cb = 0;
 
-	foreach my $class ( @{ $self->class_callbacks } ) {
+	foreach my $class ( grep { $data->isa($_) } @{ $self->class_callbacks } ) {
 		last unless blessed($data);
-		next unless $data->isa($class);
+		die "Unexpected object $data found"
+			unless $data->isa($class);
 		$self->trace( flow => class_callback => $class, on => $data ) if DEBUG;
 
 		$class_cb++;
