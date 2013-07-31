@@ -348,7 +348,7 @@ This is useful when you want to modify $_ directly
 
 =item tied_as_objects
 
-Whether ot not to visit the L<perlfunc/tied> of a tied structure instead of
+Whether or not to visit the L<perlfunc/tied> of a tied structure instead of
 pretending the structure is just a normal one.
 
 See L<Data::Visitor/visit_tied>.
@@ -404,12 +404,12 @@ Since L<Data::Visitor/visit_object> will not recurse downwards unless you
 delegate to C<visit_ref>, you can specify C<visit_ref> as the callback for
 C<object> in order to enter objects.
 
-It is reccomended that you specify the classes (or base classes) you want
+It is recommended that you specify the classes (or base classes) you want
 though, instead of just visiting any object forcefully.
 
 =item Some::Class
 
-You can use any class name as a callback. This is colled only after the
+You can use any class name as a callback. This is called only after the
 C<object> callback.
 
 If the object C<isa> the class then the callback will fire.
